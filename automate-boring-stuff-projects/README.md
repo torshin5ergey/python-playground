@@ -13,6 +13,11 @@ This repository contains a collection of Python projects created for practicing 
 2. Read the README.md file to understand the practice.
 3. Examine the source code.
 
+## Projects
+
+- [character-picture-grid](./character-picture-grid): Prints the image represented by a character picture grid.
+- [coin-flip-streaks](./coin-flip-streaks): Simulates coin flips and analyzes the occurrence of streaks of six heads or six tails in a row.
+
 ## Author
 
 Torshin Sergey [@torshin5ergey](https://github.com/torshin5ergey)
