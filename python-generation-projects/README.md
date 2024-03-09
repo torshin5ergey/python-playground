@@ -16,6 +16,7 @@ The repository contains mini-projects based on assignments from the ["Python Gen
 ## Mini-projects
 - [guess-the-number](./guess-the-number): Generates a random number and asks the user to guess this number.
 - [magic-8ball](./magic-8ball): Simulates a Magic 8 Ball.
+- [random-password-generator](./random-password-generator): Generates random passwords based on user preferences.
 
 ## Author
 
