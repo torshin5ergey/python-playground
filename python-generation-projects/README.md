@@ -14,7 +14,7 @@ The repository contains mini-projects based on assignments from the ["Python Gen
 3. Examine the source code.
 
 ## Mini-projects
-- [guess-the-number](./guess-the-number): Generates a random number in the range from 1 to 100 and asks the user to guess this number.
+- [guess-the-number](./guess-the-number): Generates a random number and asks the user to guess this number.
 
 ## Author
 
