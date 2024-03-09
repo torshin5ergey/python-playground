@@ -1,6 +1,6 @@
 # Guess the Number Game
 
-This Python program generates a random number in the range from 1 to 100 and asks the user to guess this number. It is inspired by a practice project from the Python programming course ["Python Generation: Beginner's Course"](https://stepik.org/course/58852/info).
+This Python program generates a random number and asks the user to guess this number. It is inspired by a practice project from the Python programming course ["Python Generation: Beginner's Course"](https://stepik.org/course/58852/info).
 
 ## Description
 
