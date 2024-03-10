@@ -18,4 +18,6 @@ This repository contains various Python projects that I've created for practicin
 - [automate-boring-stuff-projects](./automate-boring-stuff-projects): Projects based on the exercises and tasks outlined in the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
 - [python-generation-projects](./python-generation-projects): mini-projects based on assignments from the "Python Generation" web courses.
 
+## Author
+
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)
