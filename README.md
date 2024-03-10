@@ -1,4 +1,4 @@
-# Python Playground
+# Python Playground 🐍
 
 This repository contains various Python projects that I've created for practicing programming.
 
