@@ -17,6 +17,7 @@ The repository contains mini-projects based on assignments from the ["Python Gen
 - [caesar-cipher](./caesar-cipher): Implements Caesar's cipher algorithm for encrypting and decrypting text.
 - [guess-the-number](./guess-the-number): Generates a random number and asks the user to guess this number.
 - [magic-8ball](./magic-8ball): Simulates a Magic 8 Ball.
+- [numeral-system-calc](./numeral-system-calc): Convert numbers between different numeral systems.
 - [random-password-generator](./random-password-generator): Generates random passwords based on user preferences.
 
 ## Author
