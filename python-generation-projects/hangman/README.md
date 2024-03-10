@@ -1,6 +1,6 @@
 # Сommand-line Hangman
 
-This Python program implements a simple command-line version of the classic Hangman game. It is inspired by a practice project from the Python programming course ["Python Generation: Beginner's Course"](https://stepik.org/course/58852/info).
+This Python program implements a simple command-line version of the classic [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) game. It is inspired by a practice project from the Python programming course ["Python Generation: Beginner's Course"](https://stepik.org/course/58852/info).
 
 ## Description
 
