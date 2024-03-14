@@ -9,13 +9,13 @@ This is a Python implementation of the classic Tic Tac Toe game. It is inspired 
 ### Game Board
 
 The game board is a 3x3 grid. Each cell on the grid represents a position where players can place their marks (either 'X' or 'O'). The cells are labeled with coordinates as follows:
-'''
+```
 topL|topM|topR
 ----+----+----
 midL|midM|midR
 ----+----+----
 botL|botM|botR
-'''
+```
 
 ### Game Modes
 
