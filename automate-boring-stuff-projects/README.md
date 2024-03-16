@@ -1,4 +1,4 @@
-# Automate the Boring Stuff with Python Projects
+# “Automate the Boring Stuff with Python” Projects
 
 This repository contains a collection of Python projects created for practicing Python programming based on exercises and tasks from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
 
@@ -16,6 +16,7 @@ This repository contains a collection of Python projects created for practicing 
 ## Projects
 
 - [character-picture-grid](./character-picture-grid): Prints the image represented by a character picture grid.
+- [chess-dictionary-validator](./chess-dictionary-validator): Checks whether a given chessboard configuration is valid.
 - [coin-flip-streaks](./coin-flip-streaks): Simulates coin flips and analyzes the occurrence of streaks of six heads or six tails in a row.
 - [comma-code](./comma-code): Converts a list into a string.
 - [tic-tac-toe](./tic-tac-toe): Classic Tic Tac Toe game.

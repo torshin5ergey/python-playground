@@ -6,6 +6,7 @@ from random import choice
 board = {'topL': ' ', 'topM': ' ', 'topR': ' ', 'midL': ' ', 'midM':
 ' ', 'midR': ' ', 'botL': ' ', 'botM': ' ', 'botR': ' '}
 
+# Print the contents of a board represented as a dictionary
 def print_board(board: dict) -> None:
     print(board['topL'] + '|' + board['topM'] + '|' + board['topR'])
     print('-+-+-')
@@ -13,6 +14,7 @@ def print_board(board: dict) -> None:
     print('-+-+-')
     print(board['botL'] + '|' + board['botM'] + '|' + board['botR'])
 
+# Print a formatted grid of coordinates
 def print_coordinates_format():
     print(
 '''topL|topM|topR
@@ -43,6 +45,7 @@ def choose_from_menu() -> int:
             print('\nError! Choose 1 or 2')
     return mode
 
+# Prompt the player for their move and return the formatted move
 def player_turn() -> str:
     while True:
         move = input().strip()
@@ -58,12 +61,14 @@ def player_turn() -> str:
             print_coordinates_format()
         print(f'Try again. Move on which space?')
 
-def computer_random_move(moves) -> str:
+# Generate a random move for the computer from the available moves
+def computer_random_move(moves: list) -> str:
     random_move = choice(moves) # random.choice()
     moves.remove(random_move)
     return random_move
 
-def one_player():
+# Single-player game versus the computer
+def one_player() -> None:
     available_moves = ['topL', 'topM', 'topR', 'midL', 'midM', 'midR', 'botL', 'botM', 'botR']
     print()
     turn = 'O'
@@ -95,7 +100,8 @@ def one_player():
     print_board(board)
     print('You tied.')
     return
-    
+
+# Check if there's a winner    
 def is_win() -> bool:
     # Check win condition for rows
     for row in ['top', 'mid', 'bot']:
@@ -112,7 +118,8 @@ def is_win() -> bool:
         return True
     return False
 
-def two_players():
+# Two-player game. PLayer versus player
+def two_players() -> None:
     print()
     turn = 'O'
     for _ in range(9): # Game loop
