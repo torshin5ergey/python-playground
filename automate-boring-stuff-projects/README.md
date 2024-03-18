@@ -18,6 +18,7 @@ This repository contains a collection of Python projects created for practicing 
 - [character-picture-grid](./character-picture-grid): Prints the image represented by a character picture grid.
 - [chess-dictionary-validator](./chess-dictionary-validator): Checks whether a given chessboard configuration is valid.
 - [coin-flip-streaks](./coin-flip-streaks): Simulates coin flips and analyzes the occurrence of streaks of six heads or six tails in a row.
+- [collatz-sequense](./collatz-sequense): Generates a Collatz sequence for a given input integer.
 - [comma-code](./comma-code): Converts a list into a string.
 - [fantasy-game-inventory](./fantasy-game-inventory): Manages an inventory system, allowing users to display the current inventory and add new items to it.
 - [tic-tac-toe](./tic-tac-toe): Classic Tic Tac Toe game.
