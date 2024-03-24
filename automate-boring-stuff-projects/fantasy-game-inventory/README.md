@@ -1,6 +1,6 @@
 # Fantasy Game Inventory
 
-This Python program manages an inventory system, allowing users to display the current inventory and add new items to it. It is inspired by a practice project [Chess Dictionary Validator](https://automatetheboringstuff.com/2e/chapter4/#calibre_link-204) from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
+This Python program manages an inventory system, allowing users to display the current inventory and add new items to it. It is inspired by a practice project [Fantasy Game Inventory](https://automatetheboringstuff.com/2e/chapter5/#calibre_link-205) from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
 
 ## Description
 
