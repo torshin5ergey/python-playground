@@ -21,6 +21,7 @@ This repository contains a collection of Python projects created for practicing 
 - [collatz-sequense](./collatz-sequense): Generates a Collatz sequence for a given input integer.
 - [comma-code](./comma-code): Converts a list into a string.
 - [fantasy-game-inventory](./fantasy-game-inventory): Manages an inventory system, allowing users to display the current inventory and add new items to it.
+- [multi-clipboard-automatic-messages](./multi-clipboard-automatic-messages): Multi-clipboard tool designed to store and retrieve commonly used phrases or texts.
 - [tic-tac-toe](./tic-tac-toe): Classic Tic Tac Toe game.
 
 ## Author
