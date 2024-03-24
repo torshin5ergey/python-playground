@@ -1,6 +1,6 @@
 # Chess Dictionary Validator
 
-This Python function checks whether a given chessboard configuration is valid. It is inspired by a practice project [Chess Dictionary Validator](https://automatetheboringstuff.com/2e/chapter4/#calibre_link-204) from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
+This Python function checks whether a given chessboard configuration is valid. It is inspired by a practice project [Chess Dictionary Validator](https://automatetheboringstuff.com/2e/chapter5/#calibre_link-204) from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
 
 ## Description
 
