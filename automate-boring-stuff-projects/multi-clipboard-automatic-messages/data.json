@@ -1,0 +1,7 @@
+{
+    "agree": "Yes, I agree. That sounds fine to me.",
+    "busy": "Sorry, can we do this later this week or next week?",
+    "intro": "Hello there! My name is [Name].",
+    "debug": "I'm currently debugging the issue. It might take some time.",
+    "test+": "All test cases have passed successfully."
+}

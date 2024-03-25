@@ -5,19 +5,21 @@
 
 import sys
 import pyperclip
+import json
 
-# keyphrase-text pairs
-TEXT = {'agree': """Yes, I agree. That sounds fine to me.""",
-        'busy': """Sorry, can we do this later this week or next week?""",
-        'intro': """Hello there! My name is [Name].""",
-        'debug': """I'm currently debugging the issue. It might take some time.""",
-        'test+': """All test cases have passed successfully."""}
+# Load keyphrase-text pairs from JSON
+DATAFILE = "data.json"
+try:
+    with open(DATAFILE, 'r', encoding='utf-8') as f:
+        TEXT = json.load(f)
+except FileNotFoundError:
+    TEXT = {}
 
 # Copies the text corresponding to the keyphrase to the clipboard.
-def copy_top_clipboard(keyphrase: str) -> None:
+def copy_to_clipboard(keyphrase: str) -> None:
     try:
         pyperclip.copy(TEXT[keyphrase])
-        print(f'Text for {keyphrase} copied to clipborad.\n={TEXT[keyphrase]}=')
+        print(f'Text for {keyphrase} copied to clipborad.\n({TEXT[keyphrase]})')
     except KeyError:
         print(f'There is no text for {keyphrase}. Use -list to see available keyphrases')
 
@@ -29,6 +31,9 @@ def print_commands_list():
 def add_keyphrase(new_key, new_value):
     TEXT[new_key] = new_value
     print(f'Keyphrase "{new_key}" with text "{new_value}" added successfully.')
+    # Save to JSON
+    with open(DATAFILE, 'w') as f:
+        json.dump(TEXT, f, indent=4)
 
 def print_help():
     print('''Usage:
@@ -57,7 +62,7 @@ def main():
             sys.exit()
         add_keyphrase(sys.argv[2], sys.argv[3])
     else:
-        copy_top_clipboard(sys.argv[1])
+        copy_to_clipboard(sys.argv[1])
 
 
 if __name__ == "__main__":

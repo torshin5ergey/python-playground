@@ -15,6 +15,7 @@ The Multi-Clipboard Program (`mclip.py`) is a Python script designed to enhance 
 
 - `mclip.py`: The main Python script containing the multi-clipboard functionality.
 - `mclip.bat`: A batch file for running `mclip.py` conveniently via the command line or Run (Win+R).
+- `data.json`: JSON file containing keyphrase-text pairs for the answers.
 
 ## Usage
 Usage:
@@ -29,9 +30,8 @@ Examples:
     mclip -add keyphrase TextInOneWord
     mclip -add keyphrase "Text In Multiple Words"
 
-
 ## Customization:
-You can customize the keyphrases and corresponding texts by editing the `TEXT` dictionary within the `mclip.py` script.
+You can customize the keyphrases and corresponding texts by editing the `data.json` file.
 
 ## Requirements
 
