@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a Python implementation of the classic Tic Tac Toe game. It is inspired by a practice [A Tic-Tac-Toe Board](https://automatetheboringstuff.com/2e/chapter4/#calibre_link-199) from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
+This is a Python implementation of the classic Tic Tac Toe game. It is inspired by a practice [A Tic-Tac-Toe Board](https://automatetheboringstuff.com/2e/chapter5/#calibre_link-199) from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
 
 ## How To Play
 

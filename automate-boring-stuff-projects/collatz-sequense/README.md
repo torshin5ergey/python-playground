@@ -1,6 +1,6 @@
 # Collatz Sequence
 
-This Python function generates a Collatz sequence for a given input integer. It is inspired by a practice project [Collatz Sequence](https://automatetheboringstuff.com/2e/chapter4/#calibre_link-150) from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
+This Python function generates a Collatz sequence for a given input integer. It is inspired by a practice project [Collatz Sequence](https://automatetheboringstuff.com/2e/chapter3/#calibre_link-150) from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
 
 ## Description
 

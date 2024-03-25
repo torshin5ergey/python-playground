@@ -1,6 +1,6 @@
 # Multi-Clipboard Automatic Messages
 
-This Python program is a multi-clipboard tool designed to store and retrieve commonly used phrases or texts. It is inspired by a practice project [Multi-Clipboard Automatic Messages](https://automatetheboringstuff.com/2e/chapter4/#calibre_link-223) from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
+This Python program is a multi-clipboard tool designed to store and retrieve commonly used phrases or texts. It is inspired by a practice project [Multi-Clipboard Automatic Messages](https://automatetheboringstuff.com/2e/chapter6/#calibre_link-223) from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
 
 ## Description
 
