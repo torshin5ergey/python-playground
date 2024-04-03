@@ -14,12 +14,12 @@ The repository contains mini-projects based on assignments from the ["Python Gen
 3. Examine the source code.
 
 ## Mini-projects
-- [caesar-cipher](./caesar-cipher): Implements Caesar's cipher algorithm for encrypting and decrypting text.
-- [guess-the-number](./guess-the-number): Generates a random number and asks the user to guess this number.
+- [caesar_cipher](./caesar_cipher): Implements Caesar's cipher algorithm for encrypting and decrypting text.
+- [guess_the_number](./guess_the_number): Generates a random number and asks the user to guess this number.
 - [hangman](./hangman): A simple command-line version of the classic Hangman game.
-- [magic-8ball](./magic-8ball): Simulates a Magic 8 Ball.
-- [numeral-system-calc](./numeral-system-calc): Convert numbers between different numeral systems.
-- [random-password-generator](./random-password-generator): Generates random passwords based on user preferences.
+- [magic_8ball](./magic_8ball): Simulates a Magic 8 Ball.
+- [numeral_system_calc](./numeral_system_calc): Convert numbers between different numeral systems.
+- [random_password_generator](./random_password_generator): Generates random passwords based on user preferences.
 
 ## Author
 
