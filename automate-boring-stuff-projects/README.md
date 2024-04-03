@@ -15,6 +15,7 @@ This repository contains a collection of Python projects created for practicing 
 
 ## Projects
 
+- [bullet-point-adder](./bullet-point-adder): Automates the process of adding bullet points or numbers to lists.
 - [character-picture-grid](./character-picture-grid): Prints the image represented by a character picture grid.
 - [chess-dictionary-validator](./chess-dictionary-validator): Checks whether a given chessboard configuration is valid.
 - [coin-flip-streaks](./coin-flip-streaks): Simulates coin flips and analyzes the occurrence of streaks of six heads or six tails in a row.
