@@ -35,7 +35,9 @@ Enter the message to translate:
 Hello world!
 ```
 Output:
-`Ellohay orldway!`
+```
+Ellohay orldway!
+```
 
 ## Requirements
 
