@@ -11,26 +11,16 @@ def print_table(table: list[list[str]], separ: str = ' ', rev: bool = False) -> 
     - rev (bool, optional): Table layout. False (default): rows - horizontally,
     columns - vertically. True: columns - horizontally, rows - vertically.
     """
-    # Inner lists length (same for all)
-    line_length = len(table[0])
-    # Name every column width
-    column_widths = [0] * len(table)
-    # Find longest cell in every row
-    for row in range(len(table)):
-        column_widths[row] = max(len(cell) for cell in table[row])
-    widest_column = max(column_widths)
-
+    # Table transpose
+    if rev:
+        table = list(zip(*table))
+    # Find column width for every column
+    column_widths = [max(map(len, cell)) for cell in zip(*table)]
     # Print table data 
-    if rev: # normal layout
-        for col in range(line_length):
-            for cell in range(len(table)):
-                print(table[cell][col].rjust(column_widths[cell]), end=separ)
-            print()
-    else: # reverse layout
-        for row in table:
-            for cell in row:
-                print(cell.rjust(widest_column), end=separ)
-            print()
+    for row in table:
+        for col_x, cell in enumerate(row):
+            print(cell.rjust(column_widths[col_x]), end=separ)
+        print()
     return
 
 

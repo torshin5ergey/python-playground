@@ -1,6 +1,6 @@
 # Table Printer
 
-This program is a Python script designed to print data as a formatted table.
+This program is a Python script designed to print data as a formatted table. It is inspired by a practice project [Table Printer](https://automatetheboringstuff.com/2e/chapter6/#calibre_link-235) from the book [“Automate the Boring Stuff with Python”](https://automatetheboringstuff.com/) by Al Sweigart.
 
 ## Description
 
@@ -26,17 +26,23 @@ print_table(table_data, separ='|', rev=True)
 ```
 Output:
 ```
-              Character|                Species|             Occupation|
-      Commander Shepard|                  Human|                Spectre|
-        Garrus Vakarian|                 Turian|   Former C-Sec Officer|
-           Liara T'Soni|                  Asari|          Archaeologist|
-Tali'Zorah vas Normandy|                Quarian|               Engineer|
-            Urdnot Wrex|                 Krogan|              Mercenary|
+              Character|Species|          Occupation|
+      Commander Shepard|  Human|             Spectre|
+        Garrus Vakarian| Turian|Former C-Sec Officer|
+           Liara T'Soni|  Asari|       Archaeologist|
+Tali'Zorah vas Normandy|Quarian|            Engineer|
+            Urdnot Wrex| Krogan|           Mercenary|
 ```
 
 ## Requirements
 
 - Python 3.x
+
+## Notes
+
+- **zip() function** is used in the print_table() to transpose the matrix (table).
+- **Transposing the table** is using when the layout is reversed (`rev=True`).
+- **Optional parameters** in the print_table() `separ` and `rev`. The `separ` specifies the separator between cells, default is space. The `rev` specifies the table layout, default is `False` for rows being horizontal and columns vertical.
 
 ## Author 
 
