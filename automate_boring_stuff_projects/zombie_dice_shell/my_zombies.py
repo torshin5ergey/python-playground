@@ -7,11 +7,11 @@ Inspired by a practice project from Al Sweigart's book
 import zombiedice
 
 class BrainHunterZombie:
-    '''
+    """
     This zombie strives to hunt as many brains as possible during a turn. If the
     number of brains hunted on the current turn exceeds 3, he will keep rolling
     the dice in search of more brains.
-    '''
+    """
     def __init__(self, name: str):
         self.name = name
 
@@ -29,11 +29,11 @@ class BrainHunterZombie:
                 break
 
 class RiskTakerZombie:
-    '''
+    """
     This zombie takes risks to hunt as many brains as possible during a turn. It
     continues rolling dice even if the number of shotguns exceeds the number of
     brains hunted, but stops if it collects a certain number of shotguns.
-    '''
+    """
     def __init__(self, name: str):
         self.name = name
 

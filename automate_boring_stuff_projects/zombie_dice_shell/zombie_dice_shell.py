@@ -1,11 +1,11 @@
 '''
-zombie_dice_shell.py - 
+zombie_dice_shell.py - CLI for zombie dice games.
 Written by Sergey Torshin @torshin5ergey
 Inspired by a practice project from Al Sweigart's book
 '''
 
-import cmd, sys, os
-import subprocess
+import cmd
+import sys
 import argparse
 import zombiedice
 from my_zombies import *
@@ -16,16 +16,16 @@ class ZombieDiceShell(cmd.Cmd):
 
     def __init__(self):
         cmd.Cmd.__init__(self)
-        self.intro = 'Welcome to Zombie Dice Shell. Type help or ? to list commands.\n'
+        self.intro = 'Welcome to Zombie Dice Shell. Type help or ? to list commands.'
         self.prompt = '(ZombieDiceShell) > '
+        # Default zombies setup
         self.zombies = [
             zombiedice.examples.RandomCoinFlipZombie(name='Random'),
             zombiedice.examples.RollsUntilInTheLeadZombie(name='Until Leading'),
             zombiedice.examples.MinNumShotgunsThenStopsZombie(name='Stop at 2 Shotguns', minShotguns=2),
             zombiedice.examples.MinNumShotgunsThenStopsZombie(name='Stop at 1 Shotgun', minShotguns=1),
         ]
-
-        # List available zombies
+        # Available zombies
         # Add my zombies
         self.available_zombies = [
             BrainHunterZombie.__name__,
@@ -80,10 +80,10 @@ class ZombieDiceShell(cmd.Cmd):
         args = parser.parse_args(arg.split())
         zombiedice.runTournament(zombies = self.zombies, numGames = args.num_games)
     def help_run(self):
-        print("Run the Zombie Dice simulation.")
-        print("syntax: run [num_games]")
-        print("Parameters:")
-        print("\tnum_games (optional): Number of games to simulate (default: 1000)")
+        print("""Run the Zombie Dice simulation.
+syntax: run [num_games]
+Parameters:
+\tnum_games (optional): Number of games to simulate (default: 1000)""")
     
     def do_setup(self, arg: str):
         parser = argparse.ArgumentParser(add_help=False)
@@ -105,25 +105,22 @@ class ZombieDiceShell(cmd.Cmd):
                 self.remove_zombie(args.zombie_name)
             else:
                 print("Error: Zombie name cannot be empty.")
-
     def help_setup(self):
         print("""Setup the simulation.
 syntax: setup [command]
 Command options:
 \t- current: display current setup
 \t- list: list available zombies
-\t- add [zombie_name]: add zombie with name [zombie_name] to current setup
-\t- remove [zombie_name]: remove zombie with name [zombie_name] from current setup""")
+\t- add <zombie_name>: add zombie with name <zombie_name> to current setup
+\t- remove <zombie_name>: remove zombie with name <zombie_name> from current setup""")
 
     def do_quit(self, arg):
         sys.exit()
     def help_quit(self):
         print("Quit the program.")
 
-
 def main():
     ZombieDiceShell().cmdloop()
-    #subprocess.run(['python', 'zombie_dice_shell.py'], shell=True)
     
 if __name__ == "__main__":
     main()
