@@ -1,6 +1,6 @@
 # Zombie Dice Shell
 
-Zombie Dice Shell is a command-line interface for configuring and running simulations of the Zombie Dice game. It is inspired by a practice project [Zombie Dice Bots](https://automatetheboringstuff.com/2e/chapter6/#calibre_link-236) from the book [“Automate the Boring Stuff with Python”](https://automatetheboringstuff.com/) by Al Sweigart.
+Zombie Dice Shell is a simple command-line interface for configuring and running simulations of the Zombie Dice game. It is inspired by a practice project [Zombie Dice Bots](https://automatetheboringstuff.com/2e/chapter6/#calibre_link-236) from the book [“Automate the Boring Stuff with Python”](https://automatetheboringstuff.com/) by Al Sweigart.
 
 ## Description
 

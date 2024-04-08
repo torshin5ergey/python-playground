@@ -26,6 +26,7 @@ This repository contains a collection of Python projects created for practicing 
 - [multiclipboard_automatic_messages](./multiclipboard_automatic_messages): Multi-clipboard tool designed to store and retrieve commonly used phrases or texts.
 - [table_printer](./table_printer): Print data as a formatted table.
 - [tic_tac_toe](./tic_tac_toe): Classic Tic Tac Toe game.
+- [zombie_dice_shell](./zombie_dice_shell): Simple CLI for configuring and running simulations of the Zombie Dice game.
 
 ## Author
 
