@@ -1,6 +1,6 @@
 # Python Generation Projects
 
-The repository contains mini-projects based on assignments from the ["Python Generation: Beginner's Course"](https://stepik.org/course/58852/info). These projects are small programs designed to practice the fundamental concepts and skills of programming in Python. Each project implements a specific task or concept learned during the course and can serve as a sample or source of inspiration for beginners looking to deepen their knowledge and skills in Python programming.
+The directory contains mini-projects based on assignments from the ["Python Generation: Beginner's Course"](https://stepik.org/course/58852/info). These projects are small programs designed to practice the fundamental concepts and skills of programming in Python. Each project implements a specific task or concept learned during the course and can serve as a sample or source of inspiration for beginners looking to deepen their knowledge and skills in Python programming.
 
 ## Contents
 

@@ -1,6 +1,6 @@
 # “Automate the Boring Stuff with Python” Projects
 
-This repository contains a collection of Python projects created for practicing Python programming based on exercises and tasks from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
+This directory contains a collection of Python projects created for practicing Python programming based on exercises and tasks from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
 
 ## Contents
 
