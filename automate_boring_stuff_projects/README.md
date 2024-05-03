@@ -21,6 +21,7 @@ This directory contains a collection of Python projects created for practicing P
 - [coin_flip_streaks](./coin_flip_streaks): Simulate coin flips and analyzes the occurrence of streaks of six heads or six tails in a row.
 - [collatz_sequense](./collatz_sequense): Generate a Collatz sequence for a given input integer.
 - [comma_code](./comma_code): Convert a list into a string.
+- [data_detector](./data_detector): Detecting various types of data in text copied to the clipboard.
 - [fantasy_game_inventory](./fantasy_game_inventory): Manage an inventory system, allowing users to display the current inventory and add new items to it.
 - [language_game](./language_game): Translate messages into parody languages.
 - [multiclipboard_automatic_messages](./multiclipboard_automatic_messages): Multi-clipboard tool designed to store and retrieve commonly used phrases or texts.
