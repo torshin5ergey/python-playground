@@ -6,7 +6,7 @@ Written by Sergey Torshin @torshin5ergey
 """
 
 import pytest
-from data_detector import url_detect
+from ..data_detector import url_detect
 
 # Decorator for parametrizing a test function with multiple sets of input-expected
 @pytest.mark.parametrize("text, expected", [
@@ -54,13 +54,5 @@ https://www.example.com/faq
 https://www.example.com/sitemap""")
 ])
 
-def test_url_detector(text, expected, monkeypatch):
-    '''
-    # Mock function to replace the original pyperclip.copy
-    def mock_pyperclip_copy(result):
-        return result
-    # Dynamically replace pyperclip.copy to mock function
-    monkeypatch.setattr('pyperclip.copy', mock_pyperclip_copy)
-    '''
-
+def test_url_detector(text, expected):
     assert url_detect(text) == expected
