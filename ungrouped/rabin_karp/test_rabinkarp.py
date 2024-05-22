@@ -1,3 +1,8 @@
+'''
+test_rabinkarp.py - Unit tests for the rabin_karp()
+Written by Sergey Torshin @torshin5ergey
+'''
+
 from rabinkarp import rabin_karp
 
 def test_rabin_karp_smoke():

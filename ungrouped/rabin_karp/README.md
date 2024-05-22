@@ -1,31 +1,37 @@
 # Rabin-Karp Algorythm
 
-программа реализует алгоритм Rabin-Karp для поиска подстроки в строке
+This script implements the Rabin-Karp algorithm for substring search.
 
-[Rabin-Karp]()
+## Description
+
+The Rabin-Karp algorithm is a string-searching algorithm that efficiently finds a pattern within a text. It works by hashing the pattern and sliding a window across the text, checking for matches based on hash values.
 
 ## Algorythm
 
-0. Define:
+0. **Initialization**:
     - `n`: string length
     - `m`: substring length
     - `q`: prime modulus
     - `d`: ASCII alphabet size
-1. Calculate hashes substring and first `m` string characters window.
-2. Сравнить вычисленные хэши
-    1. Если хэши равны, то вывести текущий индекс
-    2. Если хэши не равны, то пересчитать хэш для следующего окна `m` симоволов строки. Удалить хэш первого символа и добавить хэш следующего символа.
-    3. Если совпадения не найдены, то вывести -1.
+1. **Calculate Hashes**: Calculate hashes substring and first `m` string characters window.
+2. **Compare Hashes**:
+    1. If the hashes are equal, output the current index.
+    2. If the hashes are not equal, recalculate the hash for the next `m`-character window of the string. Remove the hash of the first character and add the hash of the next character.
+    3. If no matches are found, output -1.
+
+## Contents
+
+- `rabinkarp.py`: The Rabin-Karp algorithm in `rabin_karp()`.
+- `test_rabinkarp.py`: Unit tests for the Rabin-Karp algorithm function.
+
+## *Notes*
+
+- [**Hashing**](https://en.wikipedia.org/wiki/Hash_function): The algorithm relies on hashing to efficiently compare substrings.
+- [**Rabin-Karp**](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm)
+    - **d** is used to ensure that the hash is unique for each substring. In the Rabin-Karp algorithm, each character of a string is treated as a digit in a number system with base d. With d=256, the characters of the string are treated as numbers in the 256-item number system.
+    - **q** is used to reduce collisions (situations where different substrings produce identical hashes). Using a prime number in modular arithmetic helps to distribute hashes more evenly, which reduces the probability of matching hashes for different substrings. In addition, modular division prevents overflow of hash values.
+- In the Rabin-Karp algorithm hashes are computed modulo a large prime number q. This avoids integer overflow and reduces the probability of hash collisions.
 
 ## Author
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)
-
-## *Notes*
-
-- Хэширование
-- 
-- Rabin-Karp
-    - d используется для того, чтобы обеспечить уникальность хеша для каждой подстроки. В алгоритме Rabin-Karp каждый символ строки рассматривается как цифра в системе счисления с основанием d. Например, если d = 256, то символы строки рассматриваются как числа в 256-ичной системе счисления.
-    - q Назначение: q используется для уменьшения числа коллизий (ситуаций, когда разные подстроки дают одинаковые хеши). Применение простого числа в модульной арифметике помогает распределить хеши более равномерно, что уменьшает вероятность совпадения хешей для разных подстрок. Кроме того, модульное деление предотвращает переполнение значений хеша.
-    - Алгоритм хэширования, основанный на модульной арифметике

@@ -1,3 +1,8 @@
+'''
+rabinkarp.py - Contains the Rabin-Karp algorithm for substring search.
+Written by Sergey Torshin @torshin5ergey
+'''
+
 def rabin_karp(string: str, substring:str) -> int:
     """
     Implements the Rabin-Karp algorithm for substring search.
@@ -11,7 +16,7 @@ def rabin_karp(string: str, substring:str) -> int:
         return -1
     
     # Prime modulus (big prime number) to minimize collisions
-    q = 1000000007
+    q = 1000000007 # Commonly used number
     # Alphabet size, 256 for ASCII
     d = 256
 
