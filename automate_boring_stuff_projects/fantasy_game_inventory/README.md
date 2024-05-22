@@ -13,10 +13,6 @@ The code consists of two main functions:
 2. **Add Loot**: If character acquires new items or loot, you can add them to the inventory using the add_to_inventory().
 3. **Display Inventory**: Whenever you want to view the current state of your inventory, use the display_inventory().
 
-## Dependencies
-
-Python 3.x
-
 ## Author 
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

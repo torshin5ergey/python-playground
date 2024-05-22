@@ -13,10 +13,6 @@ The program randomly selects a word from a predefined list (coding terms) and pr
 3. The program will inform you if your guess is correct or incorrect and update the hangman's state accordingly.
 4. Continue guessing until you either guess the word correctly or run out of attempts.
 
-## Dependencies
-
-Python 3.x
-
 ## Author 
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

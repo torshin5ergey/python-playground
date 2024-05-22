@@ -6,10 +6,6 @@ This Python program converts a list into a string, with items separated by a com
 
 The program takes a list as input and returns a string representation of the list, where each item is separated by a comma and a space. Additionally, 'and' is inserted before the last item in the list. The program is designed to handle any list value passed to it, including empty lists.
 
-## Dependencies
-
-Python 3.x
-
 ## Author
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

@@ -4,16 +4,6 @@ The directory contains mini-projects based on assignments from the ["Python Gene
 
 ## Contents
 
-- Each mini-project is organized into its own directory.
-- You'll find detailed README.md files within each mini-project directory.
-
-## How to Use
-
-1. Navigate to the directory of the mini-project you're interested in.
-2. Read the README.md file to understand the project.
-3. Examine the source code.
-
-## Mini-projects
 - [caesar_cipher](./caesar_cipher): Implements Caesar's cipher algorithm for encrypting and decrypting text.
 - [guess_the_number](./guess_the_number): Generates a random number and asks the user to guess this number.
 - [hangman](./hangman): A simple command-line version of the classic Hangman game.

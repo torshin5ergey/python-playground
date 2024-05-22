@@ -20,10 +20,6 @@ The function checks whether the number of each type of piece is within the allow
 - The function ensures that the number of each type of piece does not exceed the allowed number of pieces on a standard chessboard.
 - Example of allowed piece counts: 1 white king, 2 black rooks, 8 white pawns, etc.
 
-## Dependencies
-
-Python 3.x
-
 ## Author 
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

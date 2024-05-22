@@ -15,10 +15,6 @@ Enter your text: Kf sv, fi efk kf sv, kyrk zj kyv hlvjkzfe!
 Encrypted/decrypted text: To be, or not to be, that is the question!
 ```
 
-## Dependencies
-
-Python 3.x
-
 ## Author
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

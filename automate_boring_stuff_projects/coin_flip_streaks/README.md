@@ -7,10 +7,6 @@ This Python program simulates coin flips and analyzes the occurrence of streaks 
 The program generates a list of 100 random coin flips, where 'H' represents heads and 'T' represents tails. Then it checks the generated list for the presence of a streak (more than 5 consecutive occurrences of the same outcome). 
 Prints the chance of encountering a streak of six heads or tails with 10,000 simulations.
 
-## Dependencies
-
-Python 3.x
-
 ## Author 
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

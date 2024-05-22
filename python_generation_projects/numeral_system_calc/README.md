@@ -16,10 +16,6 @@ The file consists of several functions, each responsible for converting numbers 
 - Import the `numeral_system_calculator` module into your own Python script and use its functions.
 - Alternatively, you can edit calls in the `main()` and run the original Python file directly to execute the conversions.
 
-## Dependencies
-
-Python 3.x
-
 ## Author 
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

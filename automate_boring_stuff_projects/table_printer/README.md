@@ -16,11 +16,11 @@ To use the Table Printer, simply import the print_table() function into your Pyt
 from table_printer import print_table
 # Define table data
 table_data = [["Character", "Species", "Occupation"],
-                 ["Commander Shepard", "Human", "Spectre"],
-                 ["Garrus Vakarian", "Turian", "Former C-Sec Officer"],
-                 ["Liara T'Soni", "Asari", "Archaeologist"],
-                 ["Tali'Zorah vas Normandy", "Quarian", "Engineer"],
-                 ["Urdnot Wrex", "Krogan", "Mercenary"]]
+              ["Commander Shepard", "Human", "Spectre"],
+              ["Garrus Vakarian", "Turian", "Former C-Sec Officer"],
+              ["Liara T'Soni", "Asari", "Archaeologist"],
+              ["Tali'Zorah vas Normandy", "Quarian", "Engineer"],
+              ["Urdnot Wrex", "Krogan", "Mercenary"]]
 # Print the table with '|' as the separator and normal layout
 print_table(table_data, separ='|', rev=True)
 ```
@@ -34,16 +34,13 @@ Tali'Zorah vas Normandy|Quarian|            Engineer|
             Urdnot Wrex| Krogan|           Mercenary|
 ```
 
-## Requirements
-
-- Python 3.x
-
-## Notes
-
-- **zip() function** is used in the print_table() to transpose the matrix (table).
-- **Transposing the table** is using when the layout is reversed (`rev=True`).
-- **Optional parameters** in the print_table() `separ` and `rev`. The `separ` specifies the separator between cells, default is space. The `rev` specifies the table layout, default is `False` for rows being horizontal and columns vertical.
 
 ## Author 
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)
+
+## *Notes*
+
+- **zip() function** is used in the print_table() to transpose the matrix (table).
+- **Transposing the table** is using when the layout is reversed (`rev=True`).
+- **Optional parameters** in the print_table() `separ` and `rev`. The `separ` specifies the separator between cells, default is space. The `rev` specifies the table layout, default is `False` for rows being horizontal and columns vertical.

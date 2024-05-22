@@ -27,10 +27,6 @@ In this mode, you play against the computer. You will be assigned the mark 'X', 
 
 In this mode, two players take turns playing against each other. One player uses 'O', and the other uses 'X'.
 
-## Dependencies
-
-Python 3.x
-
 ## Author 
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

@@ -1,8 +1,13 @@
-# “Automate the Boring Stuff with Python” Projects
+# Ungrouped
 
-This directory contains a collection of Python projects created for practicing Python programming based on exercises and tasks from the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
+This directory contains a collection of Python projects
 
 ## Contents
+
+- Each project is organized into its own directory.
+- You'll find detailed README.md files within each practice directory, providing information about the practice.
+
+## Projects
 
 - [bullet_point_adder](./bullet_point_adder): Automate the process of adding bullet points or numbers to lists.
 - [character_picture_grid](./character_picture_grid): Print the image represented by a character picture grid.
