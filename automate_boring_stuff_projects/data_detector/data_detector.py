@@ -86,10 +86,10 @@ def url_detect(text:str) -> str:
 # Date regex
 date_regex = re.compile(r'''(
     \b
-    ((\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4}|\d{2})) |   # DD/MM/YYYY separators (/-.)
+    ((\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4}|\d{2})) |   # MM/DD/YYYY separators (/-.)
     (\d{4}[\/\-.](\d{1,2})[\/\-.](\d{1,2}))             # YYYY/MM/DD separators (/-.)
     \b
-)''', re.VERBOSE)
+    )''', re.VERBOSE)
 def date_detect(text:str) -> str:
     matches = []
     # Find all dates in the text
@@ -106,26 +106,44 @@ def date_detect(text:str) -> str:
 def format_dates(dates:str) -> str:
     input_formats = ('%m/%d/%Y', '%m-%d-%Y', '%Y/%m/%d')
     output_format = '%Y-%m-%d'
-    result = []
+    output = []
     for date in dates.split('\n'):
         is_finded = False
         for format in input_formats:
             # Parse a string into a datetime object given a corresponding format
             try:
                 date_object = datetime.strptime(date, format)
-                result.append(date_object.strftime(output_format))
+                output.append(date_object.strftime(output_format))
                 is_finded = True
                 break
             except ValueError:
                 continue
         if not is_finded:
-            result.append(date)
-    return '\n'.join(result)
+            output.append(date)
+    return '\n'.join(output)
 
-# TODO: multiple spaces between words
-# TODO: accidentally accidentally repeated words
-# TODO: multiple exclamation marks at the end of sentences. Those are annoying!!
+# DONE: multiple spaces between words
+# DONE: accidentally accidentally repeated words
+# DONE: multiple exclamation marks at the end of sentences
+repeated_word_regex = re.compile(r'''
+    \b
+    (\w+)   # Catch a word (1st group)
+    \s+     # One or more spaces
+    \1      # The word from 1st group
+    \b
+    ''', re.VERBOSE | re.I)
+# Clean text
+def clean_text(text: str) -> str:
+    text = text.strip()
+    # Delete multiple spaces between words
+    text = re.sub(r'\s+', ' ', text)
+    # Delete accidentally repeated words
+    text = re.sub(repeated_word_regex, r'\1', text)
+    # Delete multiple exclamation marks at the end of sentences
+    text = re.sub(r'(.)\1+$', r'\1', text)
+    return text
 
+# Run all functions
 def main():
     # Get the text off the clipboard
     text = pyperclip.paste()
@@ -137,17 +155,17 @@ def main():
     # Find emails
     emails = email_detect(text)
     if emails:
-        result += '\nEmails:\n' + emails
+        result += '\n\nEmails:\n' + emails
     # Find URLs
     urls = url_detect(text)
     if urls:
-        result += '\nURLs:\n' + urls
+        result += '\n\nURLs:\n' + urls
     # Find dates
     dates = date_detect(text)
     if dates:
-        result += '\nDates:\n' + dates
-    # Format dates
-    result = format_dates(dates)
+        result += '\n\nDates:\n'
+        # Format dates
+        result += format_dates(dates)
     pyperclip.copy(result)
 
 if __name__ == "__main__":

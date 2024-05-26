@@ -71,4 +71,3 @@ def test_url_detector(text, expected):
     ])
 def test_data_detector(text, expected):
     assert date_detect(text) == expected
-

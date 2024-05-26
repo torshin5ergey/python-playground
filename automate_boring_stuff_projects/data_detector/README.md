@@ -38,9 +38,17 @@ Please email support@example.com with your questions
 Visit our website at http://example.com
 Check out our website: www.example.org
 Click here: https://shop.example.ru
+Appointment dates: 3/14/2019, 03-14-2019, and 2015/3/19
 ```
 2. Run the `data_detector.py`
-3. After the script the clipboard will have:
+3. The script output is:
+```
+Phone numbers found.
+Emails found.
+URLs found.
+Dates found.
+```
+And the clipboard will have:
 ```
 Phones:
 8 (777) 345-11-23
@@ -55,12 +63,32 @@ example.com
 http://example.com
 www.example.org
 https://shop.example.ru
+
+Dates:
+2019-03-14
+2019-03-14
+2015-03-19
 ```
 
 ## Contents
 
 1. `data_detector.py`: Script with functions for detecting phone numbers, email addresses, URLs, dates (in different format DD/MM/YYYY, DD-MM-YYYY, YYYY/MM/DD) in copied text.
 2. `test_data_detector.py`: Unit tests for data_datector.py functions
+
+### Functions
+
+- `phone_detect`: Find phone numbers (in Russian format) in the provided text.
+- `email_detect`: Find email addresses in the provided text.
+- `url_detect`: Find URLs in the provided text.
+- `date_detect`: Find dates in formats in the provided text. Input formats:
+    - MM/DD/YYYY
+    - MM-DD-YYYY
+    - YYYY/MM/DD
+- `format_dates`: Convert dates from various formats to the format YYYY-MM-DD. Input formats:
+    - MM/DD/YYYY
+    - MM-DD-YYYY
+    - YYYY/MM/DD
+- `clean_text`: Remove accidentally repeated words, multiple spaces between words, and multiple exclamation marks at the end of sentences.
 
 ## Requirements
 
@@ -70,7 +98,8 @@ https://shop.example.ru
 ## *Notes*
 
 - The script utilizes regular expressions for pattern matching. The code comments has details on the regex patterns used.
-- date parsing
+- `format_dates()` uses iterative parsing of date in string. Each date is compared to date patterns.
+- Regular expressions allows to use the groups marked inside  it by specifying its number like `\1` for first group in this regular expression.
 - Unit tests for the script's functionality can be found in the test_url_detector.py file. The tests use the pytest framework and include parameterization and mock functions.
 
 ## Author
