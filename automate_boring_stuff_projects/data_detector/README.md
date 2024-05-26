@@ -59,20 +59,20 @@ https://shop.example.ru
 
 ## Contents
 
-1. `data_detector.py`: Script with functions for detecting phone numbers, email addresses, and URLs in copied text.
-2. `test_url_detector.py`: Unit tests for URL detection.
+1. `data_detector.py`: Script with functions for detecting phone numbers, email addresses, URLs, dates (in different format DD/MM/YYYY, DD-MM-YYYY, YYYY/MM/DD) in copied text.
+2. `test_data_detector.py`: Unit tests for data_datector.py functions
 
 ## Requirements
 
-- [Python 3 (3.9.1 used)](https://www.python.org/)
 - [pyperclip (1.8.2 used)](https://pypi.org/project/pyperclip/)
 - [pytest (7.3.1 used)](https://docs.pytest.org/en/latest/index.html)
-
-## Author
-
-Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)
 
 ## *Notes*
 
 - The script utilizes regular expressions for pattern matching. The code comments has details on the regex patterns used.
+- date parsing
 - Unit tests for the script's functionality can be found in the test_url_detector.py file. The tests use the pytest framework and include parameterization and mock functions.
+
+## Author
+
+Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

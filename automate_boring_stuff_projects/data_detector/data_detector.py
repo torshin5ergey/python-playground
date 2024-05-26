@@ -1,5 +1,6 @@
 '''
-data_detector.py - Finds data (phone number, email, URL, date etc.) on the clipboard.
+data_detector.py - Finds data (phone number, email, URL, date) on the clipboard.
+
 Written by Sergey Torshin @torshin5ergey
 Inspired by a practice project from Al Sweigart's book
 '''
@@ -7,6 +8,7 @@ Inspired by a practice project from Al Sweigart's book
 
 import re
 import pyperclip
+from datetime import datetime
 
 
 # Phone regex (RU)
@@ -32,6 +34,7 @@ def phone_detect(text:str) -> str:
         matches.append(phone_num)
     if matches:
         result = '\n'.join(matches)
+        print('Phone numbers found.')
         return result
     else:
         print('No phone numbers found.')
@@ -51,14 +54,15 @@ def email_detect(text:str) -> str:
     # Copy results to the clipboard
     if matches:
         result = '\n'.join(matches)
+        print('Emails found.')
         return result
     else:
         print('No emails found.')
 
 # URL regex
 url_regex = re.compile(r'''(
-    (https?:\/\/)?     # Scheme (protocol)
-    (www\.)?           # Subdomain (www)
+    (https?:\/\/)?      # Scheme (protocol)
+    (www\.)?            # Subdomain (www)
     ([a-z]{2,}\.)?      # Subdomain
     ([a-z0-9]{2,})      # Domain
     (\.[a-z]{2,3})      # Top-level domain
@@ -74,6 +78,7 @@ def url_detect(text:str) -> str:
         matches.append(group[0])
     if matches:
         result = '\n'.join(matches)
+        print('URLs found.')
         return result
     else:
         print('No URLs found.')
@@ -81,8 +86,8 @@ def url_detect(text:str) -> str:
 # Date regex
 date_regex = re.compile(r'''(
     \b
-    (\d{1,2}[\/\-.]\d{1,2}[\/\-.](\d{4}|\d{2})) |   # DD/MM/YYYY separators (/-.)
-    (\d{4}[\/\-.]\d{1,2}[\/\-.]\d{1,2})             # YYYY/MM/DD separators (/-.)
+    ((\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4}|\d{2})) |   # DD/MM/YYYY separators (/-.)
+    (\d{4}[\/\-.](\d{1,2})[\/\-.](\d{1,2}))             # YYYY/MM/DD separators (/-.)
     \b
 )''', re.VERBOSE)
 def date_detect(text:str) -> str:
@@ -92,30 +97,57 @@ def date_detect(text:str) -> str:
         matches.append(group[0])
     if matches:
         result = '\n'.join(matches)
+        print('Dates found.')
         return result
     else:
         print('No dates found.')
+
+# Format date into YYYY-MM-DD
+def format_dates(dates:str) -> str:
+    input_formats = ('%m/%d/%Y', '%m-%d-%Y', '%Y/%m/%d')
+    output_format = '%Y-%m-%d'
+    result = []
+    for date in dates.split('\n'):
+        is_finded = False
+        for format in input_formats:
+            # Parse a string into a datetime object given a corresponding format
+            try:
+                date_object = datetime.strptime(date, format)
+                result.append(date_object.strftime(output_format))
+                is_finded = True
+                break
+            except ValueError:
+                continue
+        if not is_finded:
+            result.append(date)
+    return '\n'.join(result)
+
+# TODO: multiple spaces between words
+# TODO: accidentally accidentally repeated words
+# TODO: multiple exclamation marks at the end of sentences. Those are annoying!!
 
 def main():
     # Get the text off the clipboard
     text = pyperclip.paste()
     result = ''
-    # Phones
+    # Find phones
     phones = phone_detect(text)
     if phones:
         result += 'Phones:\n' + phones
-    # Emails
+    # Find emails
     emails = email_detect(text)
     if emails:
-        result += '\n\nEmails:\n' + emails
-    # URLs
+        result += '\nEmails:\n' + emails
+    # Find URLs
     urls = url_detect(text)
     if urls:
-        result += '\n\nURLs:\n' + urls
-    # Dates
+        result += '\nURLs:\n' + urls
+    # Find dates
     dates = date_detect(text)
     if dates:
-        result += '\n\nDates:\n' + dates
+        result += '\nDates:\n' + dates
+    # Format dates
+    result = format_dates(dates)
     pyperclip.copy(result)
 
 if __name__ == "__main__":
