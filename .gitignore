@@ -1,3 +1,7 @@
+# Virtual environment directory
+.venv
+
+
 *.pyc
 
 __init__.py
