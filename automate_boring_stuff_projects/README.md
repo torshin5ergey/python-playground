@@ -11,6 +11,7 @@ This directory contains a collection of Python projects created for practicing P
 - [collatz_sequense](./collatz_sequense): Generate a Collatz sequence for a given input integer.
 - [comma_code](./comma_code): Convert a list into a string.
 - [data_detector](./data_detector): Detecting various types of data in text copied to the clipboard.
+- [date_validator](./date_validator): Detect and validate dates in DD/MM/YYYY format.
 - [fantasy_game_inventory](./fantasy_game_inventory): Manage an inventory system, allowing users to display the current inventory and add new items to it.
 - [language_game](./language_game): Translate messages into parody languages.
 - [multiclipboard_automatic_messages](./multiclipboard_automatic_messages): Multi-clipboard tool designed to store and retrieve commonly used phrases or texts.
