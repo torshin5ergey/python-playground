@@ -1,5 +1,5 @@
 '''
-sandwich_maker.py - 
+sandwich_maker.py - Sandwich maker with Sandwich class
 
 Written by Sergey Torshin @torshin5ergey
 Inspired by a practice project from Al Sweigart's book

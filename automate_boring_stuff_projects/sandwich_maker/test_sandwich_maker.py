@@ -1,5 +1,5 @@
 '''
-test_sandwich_maker.py - 
+test_sandwich_maker.py - Sandwich class unit tests
 
 Written by Sergey Torshin @torshin5ergey
 '''

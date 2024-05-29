@@ -1,8 +1,9 @@
-'''
+"""
 my_zombies.py - Simple zombie bots for zombiedice game
+
 Written by Sergey Torshin @torshin5ergey
 Inspired by a practice project from Al Sweigart's book
-'''
+"""
 
 import zombiedice
 

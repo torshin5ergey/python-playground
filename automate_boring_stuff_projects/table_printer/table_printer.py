@@ -1,6 +1,10 @@
-# table_printer.py - Print formatted table from list of lists
-# Written by Sergey Torshin @torshin5ergey
-# Inspired by a practice project from Al Sweigart's book
+"""
+table_printer.py - Print formatted table from list of lists
+
+Written by Sergey Torshin @torshin5ergey
+Inspired by a practice project from Al Sweigart's book
+"""
+
 
 def print_table(table: list[list[str]], separ: str = ' ', rev: bool = False) -> None:
     """
@@ -32,6 +36,7 @@ def main():
                  ["Tali'Zorah vas Normandy", "Quarian", "Engineer"],
                  ["Urdnot Wrex", "Krogan", "Mercenary"]]
     print_table(table_data, separ='|')
+
 
 if __name__ == "__main__":
     main()

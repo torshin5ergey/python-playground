@@ -84,12 +84,12 @@ Ties:
 
 - [zombiedice](https://pypi.org/project/zombiedice/)
 
-## Author
-
-Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)
-
 ## *Notes*
 
 - The **cmd** module provides an easy way to create CLI. Its built-in methods are used to process commands, validate input, and provide help information.
 - **Classes and class methods** helped structure the project, making it more organized and easily extensible. Zombie classes allow you to abstract the logic and state of zombies, making their management more convenient and efficient.
 - **argparse** module allows for flexibility and reliability in handling command line argument input from a user.
+
+## Author
+
+Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

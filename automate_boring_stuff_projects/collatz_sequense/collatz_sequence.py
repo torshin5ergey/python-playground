@@ -1,5 +1,8 @@
-'''Collatz Sequence
+'''
+collatz_sequence.py - Collatz Sequence
+
 Written by Sergey Torshin @torshin5ergey
+Inspired by a practice project from Al Sweigart's book
 '''
 
 def collatz(number: int) -> None:

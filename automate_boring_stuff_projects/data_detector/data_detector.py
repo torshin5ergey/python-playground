@@ -1,9 +1,10 @@
-'''
+"""
 data_detector.py - Finds data (phone number, email, URL, date) on the clipboard.
 
 Written by Sergey Torshin @torshin5ergey
 Inspired by a practice project from Al Sweigart's book
-'''
+"""
+
 #! python3
 
 import re

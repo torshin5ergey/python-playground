@@ -1,3 +1,10 @@
+"""
+fantasy_game_inventory.py - Fantasy Game Inventory
+
+Written by Sergey Torshin @torshin5ergey
+Inspired by a practice project from Al Sweigart's book
+"""
+
 # Display inventory
 def display_inventory(inventory: dict) -> None:
     print('Inventory:')
@@ -20,6 +27,7 @@ def main():
     dragon_loot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
     stuff = add_to_inventory(stuff, dragon_loot)
     display_inventory(stuff)
+
 
 if __name__ == '__main__':
     main()

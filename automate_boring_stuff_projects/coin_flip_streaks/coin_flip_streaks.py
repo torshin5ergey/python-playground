@@ -1,4 +1,8 @@
-# Coin FLip Streaks
+"""
+coin_flip_streaks.py - Coin FLip Streaks
+
+
+"""
 
 import random
 

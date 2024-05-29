@@ -1,8 +1,10 @@
-'''
+"""
 zombie_dice_shell.py - CLI for zombie dice games.
+
 Written by Sergey Torshin @torshin5ergey
 Inspired by a practice project from Al Sweigart's book
-'''
+"""
+
 
 import cmd
 import sys
@@ -119,8 +121,10 @@ Command options:
     def help_quit(self):
         print("Quit the program.")
 
+
 def main():
     ZombieDiceShell().cmdloop()
     
+
 if __name__ == "__main__":
     main()

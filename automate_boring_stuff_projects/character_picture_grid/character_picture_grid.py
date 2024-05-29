@@ -1,4 +1,9 @@
-# Character Picture Grid
+"""
+character_picture_grid.py - Character Picture Grid
+
+Written by Sergey Torshin @torshin5ergey
+Inspired by a practice project from Al Sweigart's book
+"""
 
 # Print the image using the symbols grid.
 def print_character(grid):

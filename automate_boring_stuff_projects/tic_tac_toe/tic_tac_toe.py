@@ -1,4 +1,10 @@
-# Tic Tac Toe Game
+"""
+tic_tac_toe.py - Tic Tac Toe Game
+
+Written by Sergey Torshin @torshin5ergey
+Inspired by a practice project from Al Sweigart's book
+"""
+
 
 from random import choice
 

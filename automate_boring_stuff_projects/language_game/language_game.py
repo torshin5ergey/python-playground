@@ -1,8 +1,11 @@
-# language_game.py - Translate message to one of the parody languages such as
-# "Pig Latin" (eng) or "Salty (Blue) Language" (rus)
+"""
+language_game.py - Translate message to one of the parody languages such as
+"Pig Latin" (eng) or "Salty (Blue) Language" (rus)
 
-# Written by Sergey Torshin @torshin5ergey
-# Inspired by a practice project from Al Sweigart's book
+Written by Sergey Torshin @torshin5ergey
+Inspired by a practice project from Al Sweigart's book
+"""
+
 
 # Get user message to translate
 def get_message() -> str:
@@ -76,6 +79,7 @@ def main():
 
     # Output translated message
     print(' '.join(translated_message))
+
 
 if __name__ == '__main__':
     main()

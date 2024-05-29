@@ -1,7 +1,11 @@
+"""
+mclip.py - A multi-clipboard program
+
+Written by Sergey Torshin @torshin5ergey
+Inspired by a practice project from Al Sweigart's book
+"""
+
 #! python
-# mclip.py - A multi-clipboard program
-# Written by Sergey Torshin @torshin5ergey
-# Inspired by a practice project from Al Sweigart's book
 
 import sys
 import pyperclip

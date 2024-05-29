@@ -36,7 +36,6 @@ You can customize the keyphrases and corresponding texts by editing the `data.js
 ## Requirements
 
 - Windows 10 or later
-- Python 3.x
 - [pyperclip](https://pypi.org/project/pyperclip) module
 
 ## Author 

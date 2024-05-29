@@ -1,10 +1,10 @@
-'''
-multiplication_quiz.py - 
+"""
+multiplication_quiz.py - Simple multiplication quiz game
 
 Written by Sergey Torshin @torshin5ergey
 Inspired by a practice project from Al Sweigart's book
-'''
-#! python3
+"""
+
 
 import random
 import time
