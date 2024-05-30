@@ -1,0 +1,35 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "port": "3000",
+        "debug": "true"
+    },
+    "database": {
+        "type": "postgresql",
+        "host": "localhost",
+        "port": 5432,
+        "username": "db_user",
+        "password": "db_password",
+        "database_name": "my_database"
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "/var/log/myapp.log"
+    },
+    "api": {
+        "key": "my_api_key",
+        "endpoint": "https://api.example.com/v1/"
+    },
+    "email": {
+        "smtp_server": "smtp.example.com",
+        "smtp_port": 587,
+        "username": "email_user",
+        "password": "email_password",
+        "from_email": "no-reply@example.com",
+        "to_email": "admin@example.com"
+    },
+    "features": {
+        "enable_feature_x": true,
+        "enable_feature_y": false
+    }
+}

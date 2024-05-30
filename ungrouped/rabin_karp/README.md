@@ -6,7 +6,7 @@ This script implements the **Rabin-Karp algorithm** for substring search.
 
 The [Rabin-Karp](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm) algorithm is a string-searching algorithm that efficiently finds a pattern within a text. It works by **hashing** the pattern and sliding a window across the text, checking for matches based on hash values.
 
-## Algorythm
+## Algorithm
 
 0. **Initialization**:
     - `n`: string length
