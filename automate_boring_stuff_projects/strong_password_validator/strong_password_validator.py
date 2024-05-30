@@ -1,5 +1,5 @@
 """
-strong_password_validator.py - Strong password validator using regular expressions
+strong_password_validator.py - Strong password validator using regular expressions.
 
 Written by Sergey Torshin @torshin5ergey
 Inspired by a practice project from Al Sweigart's book
