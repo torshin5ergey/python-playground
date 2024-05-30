@@ -17,6 +17,7 @@ This directory contains a collection of Python projects created for practicing P
 - [multiclipboard_automatic_messages](./multiclipboard_automatic_messages): Multi-clipboard tool designed to store and retrieve commonly used phrases or texts.
 - [multiplication_quiz](./multiplication_quiz): Simple multiplication quiz game.
 - [sandwich_maker](./sandwich_maker): Python program for making sandwiches.
+- [strip_regex_version](./strip_regex_version): Regular expression version of Python's strip() method.
 - [strong_password_validator](./strong_password_validator): Strong password validator using regular expressions.
 - [table_printer](./table_printer): Print data as a formatted table.
 - [tic_tac_toe](./tic_tac_toe): Classic Tic Tac Toe game.
