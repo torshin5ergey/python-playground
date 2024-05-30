@@ -1,6 +1,7 @@
 # Sandwich Maker
 
 Python program for **making sandwiches**, along with a test suite to ensure its correctness.
+It is inspired by a practice project [Sandwich Maker](https://automatetheboringstuff.com/2e/chapter8/#calibre_link-288) from the book [“Automate the Boring Stuff with Python”](https://automatetheboringstuff.com/) by Al Sweigart.
 
 ## Description
 
@@ -26,6 +27,10 @@ python sandwich_maker.py
 ```bash
 python test_sandwich_maker.py
 ```
+or
+```bash
+python -m unittest test_sandwich_maker.py
+```
 This will run the unit tests and display the results.
 
 ## Contents
@@ -48,25 +53,24 @@ This will run the unit tests and display the results.
 - `total_cost`: the total cost of the sandwich.
 
 **Methods:**
-- `choose_bread(self, ask=True)`: choose the bread type for the sandwich.
-- `choose_protein(self, ask=True)`: choose the protein type for the sandwich.
-- `choose_cheese(self, ask=True)`: choose the cheese type for the sandwich.
-- `choose_extra(self, ask=True)`: choose additional extras for the sandwich.
-- `alert_already_exists(self, param)`: alert if the parameter is already chosen.
-- `rechoose(param)`: rechoose a parameter.
-- `calculate_total(self)`: calculate the total cost of the sandwich.
+- `choose_bread`: choose the bread type for the sandwich.
+- `choose_protein`: choose the protein type for the sandwich.
+- `choose_cheese`: choose the cheese type for the sandwich.
+- `choose_extra`: choose additional extras for the sandwich.
+- `alert_already_exists`: alert if the parameter is already chosen.
+- `rechoose`: rechoose a parameter.
+- `calculate_total`: calculate the total cost of the sandwich.
 
 ### Unit tests
 
 **Test class**: `TestSandwich`
 
 **Included tests:**
-- `setUp(self)`: initialize a new Sandwich object before each test.
-- `test_choose_bread(self, mock_input)`: test choosing bread for the sandwich.
-- `test_choose_protein(self, mock_input)`: test choosing protein for the sandwich.
-- `test_choose_cheese(self, mock_input, mock_yesno)`: test choosing cheese for the sandwich.
-- `test_choose_extra(self, mock_input, mock_yesno)`: test choosing additional extras for the sandwich.
-- `test_calculate_total(self)`: test calculating the total cost of the sandwich.
+- `test_choose_bread`: test choosing bread for the sandwich.
+- `test_choose_protein`: test choosing protein for the sandwich.
+- `test_choose_cheese`: test choosing cheese for the sandwich.
+- `test_choose_extra`: test choosing additional extras for the sandwich.
+- `test_calculate_total`: test calculating the total cost of the sandwich.
 
 ## Usage example
 
@@ -116,7 +120,7 @@ Total cost of your sandwich: 6.5€
 ## *Notes*
 
 - The Sandwich class serves as the core component of the project, exemplifying an **object-oriented** approach to programming. It encapsulates data about the sandwich (bread type, protein, cheese, extra ingredients) and methods to manipulate this data (parameter selection, total cost calculation).
-- The **unittest** module is utilized to test the Sandwich class. Each method of the Sandwich class is tested for its correctness through corresponding unit tests. **Mocking** is utilized to simulate user inputs and external dependencies.
+- The **unittest** module is utilized to test the Sandwich class. Each method of the Sandwich class is tested for its correctness through corresponding unit tests. **Mocking** is utilized to simulate user inputs and external dependencies. **mock.side_effect** is used to specify sequence of return values when mocked function is called.
 
 ## Author
 
