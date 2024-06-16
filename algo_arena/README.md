@@ -5,6 +5,7 @@ This directory contains various algorithm practice problems and their implementa
 ## Contents
 
 - [binary_search](./binary_search/): A simple and efficient iterative binary search algorithm.
+- [sort_algorithms](./sort_algorithms/): Various implementations of sorting algorithms. 
 
 ## Author
 

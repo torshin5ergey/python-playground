@@ -1,11 +1,12 @@
 '''
-test_sort_algorithms.py -- Test for different sort algorithms
+test_sort_algorithms.py -- Test for different sort algorithms.
 
 Wirtten by Sergey Torshin @torshin5ergey
 '''
 
 import unittest
-from sort_algorithms import *
+from bubble_sort import bubble_sort
+from quicksort import quicksort
 
 class TestSortAlgo(unittest.TestCase):
     def setUp(self) -> None:
@@ -23,6 +24,11 @@ class TestSortAlgo(unittest.TestCase):
     def test_bubble_sort(self):
         for unsorted, sorted in zip(self.inputs, self.outputs):
             bubble_sort(unsorted)
+            self.assertEqual(unsorted, sorted)
+            
+    def test_quick_sort(self):
+        for unsorted, sorted in zip(self.inputs, self.outputs):
+            quicksort(unsorted)
             self.assertEqual(unsorted, sorted)
     
     
