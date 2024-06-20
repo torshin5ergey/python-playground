@@ -16,6 +16,7 @@ This directory contains a collection of Python projects created for practicing P
 - [language_game](./language_game): Translate messages into parody languages.
 - [multiclipboard_automatic_messages](./multiclipboard_automatic_messages): Multi-clipboard tool designed to store and retrieve commonly used phrases or texts.
 - [multiplication_quiz](./multiplication_quiz): Simple multiplication quiz game.
+- [random_quiz_generator](./random_quiz_generator/): A multiple-choice quiz generator.
 - [sandwich_maker](./sandwich_maker): Python program for making sandwiches.
 - [strip_regex_version](./strip_regex_version): Regular expression version of Python's strip() method.
 - [strong_password_validator](./strong_password_validator): Strong password validator using regular expressions.
