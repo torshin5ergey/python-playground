@@ -1,7 +1,11 @@
 # Virtual environment directory
 .venv
 
-
 *.pyc
 
 __init__.py
+
+# updatable_multiclipboard shelve files
+/automate_boring_stuff_projects/updatable_multiclipboard/mcb.bak
+/automate_boring_stuff_projects/updatable_multiclipboard/mcb.dat
+/automate_boring_stuff_projects/updatable_multiclipboard/mcb.dir

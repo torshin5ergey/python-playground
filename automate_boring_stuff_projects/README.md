@@ -22,6 +22,7 @@ This directory contains a collection of Python projects created for practicing P
 - [strong_password_validator](./strong_password_validator): Strong password validator using regular expressions.
 - [table_printer](./table_printer): Print data as a formatted table.
 - [tic_tac_toe](./tic_tac_toe): Classic Tic Tac Toe game.
+- [updatable_multiclipboard](./updatable_multiclipboard): Another implementation of [multi-clipboard tool](./multiclipboard_automatic_messages/). 
 - [zombie_dice_shell](./zombie_dice_shell): Simple CLI for configuring and running simulations of the Zombie Dice game.
 
 ## Author
