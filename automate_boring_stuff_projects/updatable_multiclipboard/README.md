@@ -38,9 +38,11 @@ python mcb.pyw save <keyword>
 
 Usage:
 ```
-mcb save <keyword> - Saves clipboard to keyword.
-mcb <keyword> - Loads keyword to clipboard.
-mcb list - Loads all keywords to clipboard.
+mcb.pyw save <keyword> - Saves clipboard to keyword.
+mcb.pyw delete <keyword> - Deletes keyword to clipboard.
+mcb.pyw <keyword> - Loads keyword to clipboard.
+mcb.pyw list - Loads all keywords to clipboard.
+mcb.pyw delete - Deletes all saved keywords.
 ```
 
 Examples:
@@ -48,6 +50,7 @@ Examples:
 mcb save email (with test@email.com in the clipboard)
 mcb email (test@email.com copied to the the clipboard)
 mcb list (['email'] copied to the the clipboard)
+mcb delete email (deleted all keywords)
 ```
 
 ## Requirements
