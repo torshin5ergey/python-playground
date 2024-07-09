@@ -14,6 +14,7 @@ This directory contains a collection of Python projects created for practicing P
 - [date_validator](./date_validator): Detect and validate dates in DD/MM/YYYY format.
 - [fantasy_game_inventory](./fantasy_game_inventory): Manage an inventory system, allowing users to display the current inventory and add new items to it.
 - [language_game](./language_game): Translate messages into parody languages.
+- [mad_libs](./mad_libs): Mad Libs game.
 - [multiclipboard_automatic_messages](./multiclipboard_automatic_messages): Multi-clipboard tool designed to store and retrieve commonly used phrases or texts.
 - [multiplication_quiz](./multiplication_quiz): Simple multiplication quiz game.
 - [random_quiz_generator](./random_quiz_generator/): A multiple-choice quiz generator.
