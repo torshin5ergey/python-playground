@@ -43,25 +43,28 @@ def main():
     parser.add_argument('pattern', metavar='PATTERN', type=str,
                         help="Regular expression to search for in files.")
     parser.add_argument('path', nargs='?', default='.',
-                        help="Optional path to directory with files (default is current directory).")
+                        help=("Optional path to directory with files"
+                              "(default is current directory)."))
     args = parser.parse_args()
-    
+
     if args.path:
         path = os.path.abspath(args.path)
     else:
         path = os.path.dirname(os.path.abspath(sys.argv[0]))
     if not os.path.isdir(path):
         parser.error(f"The path {path} is not a valid directory.")
-    
+
     text_files = list_files(path)
     matches = []
     for f in text_files:
         cur_match = parse_file(args.pattern, f, args.ignore_case)
         if cur_match:
             matches.append(cur_match)
-    
+
     # Print results
     pprint.pprint(matches)
+    # Wait to exit
+    input("Press Enter to continue...")
 
 if __name__ == "__main__":
     main()
