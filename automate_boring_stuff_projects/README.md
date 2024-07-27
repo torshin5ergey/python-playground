@@ -19,6 +19,8 @@ This directory contains a collection of Python projects created for practicing P
 - [multiplication_quiz](./multiplication_quiz): Simple multiplication quiz game.
 - [random_quiz_generator](./random_quiz_generator/): A multiple-choice quiz generator.
 - [regex_search](./regex_search/): User-supplied regex search in files.
+- [rename_dates](./rename_dates/): Renames filenames with American MM-DD-YYYY date format to
+European DD-MM-YYYY.
 - [sandwich_maker](./sandwich_maker): Python program for making sandwiches.
 - [strip_regex_version](./strip_regex_version): Regular expression version of Python's strip() method.
 - [strong_password_validator](./strong_password_validator): Strong password validator using regular expressions.
