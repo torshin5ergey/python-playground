@@ -4,6 +4,7 @@ This directory contains a collection of Python projects created for practicing P
 
 ## Contents
 
+- [backup_to_zip](./backup_to_zip): Copies an entire folder and its contents into a ZIP file.
 - [bullet_point_adder](./bullet_point_adder): Automate the process of adding bullet points or numbers to lists.
 - [character_picture_grid](./character_picture_grid): Print the image represented by a character picture grid.
 - [chess_dictionary_validator](./chess_dictionary_validator): Check whether a given chessboard configuration is valid.
