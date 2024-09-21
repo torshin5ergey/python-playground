@@ -23,6 +23,7 @@ This directory contains a collection of Python projects created for practicing P
 - [rename_dates](./rename_dates/): Renames filenames with American MM-DD-YYYY date format to
 European DD-MM-YYYY.
 - [sandwich_maker](./sandwich_maker): Python program for making sandwiches.
+- [selective_copy](./selective_copy): Selective copy files with specified extensions from one directory to another.
 - [strip_regex_version](./strip_regex_version): Regular expression version of Python's strip() method.
 - [strong_password_validator](./strong_password_validator): Strong password validator using regular expressions.
 - [table_printer](./table_printer): Print data as a formatted table.
