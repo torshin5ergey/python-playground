@@ -11,7 +11,7 @@ Written by Sergey Torshin @torshin5ergey
 
 import re
 import sys
-import pprint
+import json
 from typing import Dict, List, Union, Tuple
 import argparse
 import logging
@@ -88,15 +88,17 @@ def parse_args():
         'report_type', type=str,
         choices=['response-fastest', 'response-slowest',
                  'most-frequent-ip', 'all'],
-        help='Report type'
+        help='Report type (choose from available)'
     )
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
+    
     report = parse_log(args.logfile)
     log.debug("Report\n%s", report)
+    
     if args.report_type == 'all':  # all
         fastest_ip, fastest_response = get_fastest(report)
         slowest_ip, slowest_response = get_slowest(report)
