@@ -13,6 +13,7 @@ This directory contains a collection of Python projects created for practicing P
 - [comma_code](./comma_code): Convert a list into a string.
 - [data_detector](./data_detector): Detecting various types of data in text copied to the clipboard.
 - [date_validator](./date_validator): Detect and validate dates in DD/MM/YYYY format.
+- [delete_unneeded_files](./delete_unneeded_files/): Find and print large files in a specified directory.
 - [fantasy_game_inventory](./fantasy_game_inventory): Manage an inventory system, allowing users to display the current inventory and add new items to it.
 - [language_game](./language_game): Translate messages into parody languages.
 - [mad_libs](./mad_libs): Mad Libs game.
