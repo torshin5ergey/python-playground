@@ -15,6 +15,7 @@ This directory contains a collection of Python projects created for practicing P
 - [date_validator](./date_validator): Detect and validate dates in DD/MM/YYYY format.
 - [delete_unneeded_files](./delete_unneeded_files/): Find and print large files in a specified directory.
 - [fantasy_game_inventory](./fantasy_game_inventory): Manage an inventory system, allowing users to display the current inventory and add new items to it.
+- [filling_in_gaps](./filling_in_gaps): Find and fill gaps in a sequence of files with a given prefix.
 - [language_game](./language_game): Translate messages into parody languages.
 - [mad_libs](./mad_libs): Mad Libs game.
 - [multiclipboard_automatic_messages](./multiclipboard_automatic_messages): Multi-clipboard tool designed to store and retrieve commonly used phrases or texts.
