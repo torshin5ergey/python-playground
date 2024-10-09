@@ -18,6 +18,7 @@ import logging
 
 import pyperclip
 
+
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
 log.addHandler(logging.StreamHandler())
@@ -25,18 +26,29 @@ log.addHandler(logging.StreamHandler())
 class Mapit:
     def __init__(self, address:str) -> None:
         self.address = address
-        
-    def open_address(self):
+
+    def open_address(self) -> None:
+        """Opens the address in the web browser using Google Maps."""
+        if not self.address:
+            log.error("No address provided to open")
+            raise ValueError("Address cannot be empty")
+
         map_url = "https://www.google.com/maps/place/"
+        log.info("Opening Google Map for address: %s", self.address)
         webbrowser.open(map_url + self.address)
+
 
 if __name__ == "__main__":
     # parse cli arguments
     if len(sys.argv) > 1:
-        address = " ".join(sys.argv[1:])  # get args as a single string
+        user_address = " ".join(sys.argv[1:])  # get args as a single string
     else:
-        address = pyperclip.paste()  # get address from clipboard
-    
-    mapit = Mapit(address)
-    log.debug("mapit address: %s", mapit.address)
-    mapit.open_address()
+        user_address = pyperclip.paste()  # get address from clipboard
+
+    try:
+        mapit = Mapit(user_address)
+        log.debug("Mapit address: %s", mapit.address)
+        mapit.open_address()
+    except ValueError as e:
+        log.error("Error: %s", e)
+        print("Error. Please provide the address.")
