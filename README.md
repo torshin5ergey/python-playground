@@ -18,7 +18,7 @@ This repository contains various Python projects that I've created for practicin
 - [algo_arena](./algo_arena/): Algorithm practice problems and their implementations.
 - [autbor](./autbor): Projects based on the exercises and tasks outlined in the book ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com/) by Al Sweigart.
 - [ungrouped](./ungrouped): Ungrouped exercises.
-- [python_generation_projects](./python_generation_projects): mini-projects based on assignments from the "Python Generation" web courses.
+- [python_generation](./python_generation): mini-projects based on assignments from the "Python Generation" web courses.
 
 ## Author
 
