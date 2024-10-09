@@ -18,6 +18,8 @@ This directory contains a collection of Python projects created for practicing P
 - [filling_in_gaps](./filling_in_gaps): Find and fill gaps in a sequence of files with a given prefix.
 - [language_game](./language_game): Translate messages into parody languages.
 - [mad_libs](./mad_libs): Mad Libs game.
+- [mapit](./mapit): Launches a map in the browser using an address
+from the command line or clipboard.
 - [multiclipboard_automatic_messages](./multiclipboard_automatic_messages): Multi-clipboard tool designed to store and retrieve commonly used phrases or texts.
 - [multiplication_quiz](./multiplication_quiz): Simple multiplication quiz game.
 - [random_quiz_generator](./random_quiz_generator/): A multiple-choice quiz generator.
