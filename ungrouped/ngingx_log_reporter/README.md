@@ -18,7 +18,7 @@ git clone https://github.com/torshin5ergey/python-playground.git
 ```
 2. Go to this project directory
 ```code
-cd python-playground/ungrouped/log_reporter
+cd python-playground/ungrouped/nginx_log_reporter
 ```
 3. Run Python file with desired arguments (e.g.)
 ```
@@ -33,11 +33,11 @@ The command, if run with `-h` or `--help`, will show the available options:
 logreporter.py [-h] [-f LOGFILE] {response-fastest,response-slowest,most-frequent-ip,all}
 
 positional arguments:
-  {response-fastest,response-slowest,most-frequent-ip,all}     
+  {response-fastest,response-slowest,most-frequent-ip,all}
                         Report type (choose from available)
 
 optional arguments:
-  -h, --help            show this help message and exit        
+  -h, --help            show this help message and exit
   -f LOGFILE, --logfile LOGFILE
                         Log file path (default is
                         /var/log/nginx/access.log)
