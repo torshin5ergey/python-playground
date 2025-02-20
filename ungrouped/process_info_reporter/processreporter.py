@@ -1,6 +1,10 @@
 #! python3
 
-# processreporter.py - Collects
+# processreporter.py - Collects and reports information (PID, path, memory,
+# total file descriptors, exe file) about a specified or current process.
+#
+# Usage:
+#   processreporter.py [PID]
 #
 # Written by Sergey Torshin @torshin5ergey
 
