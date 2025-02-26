@@ -8,6 +8,7 @@ This directory contains a collection of ungrouped Python projects for practice.
 - [nginx_log_reporter](./nginx_log_reporter): Nginx log analyser.
 - [process_info_reporter](./process_info_reporter/): Collects and reports information about a specified or current process.
 - [rabin_karp](./rabin_karp): The Rabin-Karp algorithm for substring search.
+- [system_info_reporter](./system_info_reporter/): Collects and reports system information.
 
 ## Author
 
