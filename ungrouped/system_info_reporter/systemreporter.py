@@ -81,5 +81,5 @@ class SystemReporter:
             log.error("Could not determine the number of CPU threads")
             raise ValueError("CPU threads information not found")
 
-        self.cpu_info["threads"] = cpu_threads.group(1)
+        self.cpu_info["threads"] = int(cpu_threads.group(1))
         log.info(f"CPU threads: {self.cpu_info['threads']}")
