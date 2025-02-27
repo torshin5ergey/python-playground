@@ -22,8 +22,15 @@ log = logging.getLogger(__name__)
 
 class SystemReporter:
     def __init__(self):
+        self.cpuinfo_path = "/proc/cpuinfo"
         self.cpu_info = {}
         self.disk_info = {}
+
+
+    def read_cpuinfo(self):
+        with open(self.cpuinfo_path, "r") as f:
+            cpuinfo = f.read()
+        return cpuinfo
 
 
     def report(self, param):
@@ -43,8 +50,7 @@ class SystemReporter:
 
 
     def get_cpu_model(self):
-        with open("/proc/cpuinfo", "r") as f:
-            cpuinfo = f.read()
+        cpuinfo = self.read_cpuinfo()
 
         cpu_model = re.search(r"model name\s+: (.+)", cpuinfo)
         if not cpu_model:
@@ -56,8 +62,7 @@ class SystemReporter:
 
 
     def get_cpu_cores(self):
-        with open("/proc/cpuinfo", "r") as f:
-            cpuinfo = f.read()
+        cpuinfo = self.read_cpuinfo()
 
         cpu_cores = len(re.findall(r"processor\s+: \d+", cpuinfo))
         if not cpu_cores:
@@ -69,8 +74,7 @@ class SystemReporter:
 
 
     def get_cpu_threads(self):
-        with open("/proc/cpuinfo", "r") as f:
-            cpuinfo = f.read()
+        cpuinfo = self.read_cpuinfo()
 
         cpu_threads = re.search(r"cpu cores\s+: (\d+)", cpuinfo)
         if not cpu_threads:
