@@ -15,6 +15,7 @@ CPUINFO_INVALID = read_test_data("cpuinfo_invalid")
 
 # Tests
 class TestSystemReporter:
+    # get_cpu_model
     @patch("builtins.open", new_callable=mock_open, read_data=CPUINFO_VALID)
     def test_get_cpu_model_positive(self, mock_file):
         reporter = SystemReporter()
@@ -26,3 +27,16 @@ class TestSystemReporter:
         reporter = SystemReporter()
         with pytest.raises(ValueError, match="CPU model information not found"):
             reporter.get_cpu_model()
+
+    # get_cpu_cores
+    @patch("builtins.open", new_callable=mock_open, read_data=CPUINFO_VALID)
+    def test_get_cpu_cores_positive(self, mock_file):
+        reporter = SystemReporter()
+        reporter.get_cpu_cores()
+        assert reporter.cpu_info["cores"] == 2
+
+    @patch("builtins.open", new_callable=mock_open, read_data=CPUINFO_INVALID)
+    def test_get_cpu_cores_negative(self, mock_file):
+        reporter = SystemReporter()
+        with pytest.raises(ValueError, match="CPU cores information not found"):
+            reporter.get_cpu_cores()
