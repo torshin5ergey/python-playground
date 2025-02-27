@@ -42,9 +42,17 @@ class SystemReporter:
             print(f"{key}\t: {value}")
 
 
-    def get_cpu_model_name(self):
-        # TODO
-        pass
+    def get_cpu_model(self):
+        with open("/proc/cpuinfo", "r") as f:
+            cpuinfo = f.read()
+
+        cpu_model = re.search(r"model name\s+: (.+)", cpuinfo)
+        if not cpu_model:
+            log.error("Could not determine the CPU model")
+            raise ValueError("CPU model information not found")
+
+        self.cpu_info["model"] = cpu_model.group(1)
+        log.info(f"CPU model: {self.cpu_info['model']}")
 
 
     def get_cpu_cores(self):
@@ -54,7 +62,7 @@ class SystemReporter:
         cpu_cores = len(re.findall(r"processor\s+: \d+", cpuinfo))
         if not cpu_cores:
             log.error("Could not determine the number of CPU cores")
-            raise ValueError("CPU cores information not found.")
+            raise ValueError("CPU cores information not found")
 
         self.cpu_info["cores"] = cpu_cores
         log.info(f"CPU cores: {self.cpu_info['cores']}")
@@ -64,21 +72,10 @@ class SystemReporter:
         with open("/proc/cpuinfo", "r") as f:
             cpuinfo = f.read()
 
-        cpu_threads = re.search(r"cpu cores\s+: (\d+)", cpuinfo).group(1)
+        cpu_threads = re.search(r"cpu cores\s+: (\d+)", cpuinfo)
         if not cpu_threads:
             log.error("Could not determine the number of CPU threads")
-            raise ValueError("CPU threads information not found.")
+            raise ValueError("CPU threads information not found")
 
-        self.cpu_info["threads"] = cpu_threads
+        self.cpu_info["threads"] = cpu_threads.group(1)
         log.info(f"CPU threads: {self.cpu_info['threads']}")
-
-
-def main():
-    reporter = SystemReporter()
-    reporter.get_cpu_cores()
-    reporter.get_cpu_threads()
-    reporter.print_cpu_info()
-    reporter.report("cpu")
-
-if __name__ == "__main__":
-    main()
