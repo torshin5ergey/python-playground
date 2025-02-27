@@ -63,6 +63,7 @@ class SystemReporter:
     def get_cpu_threads(self):
         with open("/proc/cpuinfo", "r") as f:
             cpuinfo = f.read()
+
         cpu_threads = re.search(r"cpu cores\s+: (\d+)", cpuinfo).group(1)
         if not cpu_threads:
             log.error("Could not determine the number of CPU threads")
