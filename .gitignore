@@ -2,8 +2,7 @@
 .venv
 
 *.pyc
-
-__init__.py
+__pycache__/
 
 # updatable_multiclipboard shelve files
 /automate_boring_stuff_projects/updatable_multiclipboard/mcb.bak
