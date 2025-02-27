@@ -65,14 +65,17 @@ class SystemReporter:
             cpuinfo = f.read()
         cpu_threads = re.search(r"cpu cores\s+: (\d+)", cpuinfo).group(1)
         if not cpu_threads:
-            log.error()
-            sys.exit(1)
-        # TODO add to cpu_info
+            log.error("Could not determine the number of CPU threads")
+            raise ValueError("CPU threads information not found.")
+
+        self.cpu_info["threads"] = cpu_threads
+        log.info(f"CPU threads: {self.cpu_info['threads']}")
 
 
 def main():
     reporter = SystemReporter()
     reporter.get_cpu_cores()
+    reporter.get_cpu_threads()
     reporter.print_cpu_info()
     reporter.report("cpu")
 
