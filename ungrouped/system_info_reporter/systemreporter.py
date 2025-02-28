@@ -12,6 +12,8 @@ Written by Sergey Torshin @torshin5ergey
 import json
 import logging
 import re
+import psutil
+import humanize
 
 # Setup logging
 logging.basicConfig(
@@ -61,6 +63,16 @@ class SystemReporter:
             print(f"{key}\t: {value}")
 
 
+    def print_disk_info(self):
+        """"""
+        if not self.disk_info:
+            log.error("No disk information available")
+            return
+        print("Disk information:")
+        for key, value in self.disk_info.items():
+            print(f"{key}\t: {value}")
+
+
     def get_cpu_model(self):
         """"""
         cpuinfo = self.read_cpuinfo()
@@ -98,3 +110,28 @@ class SystemReporter:
 
         self.cpu_info["threads"] = int(cpu_threads.group(1))
         log.info("CPU threads: %s", self.cpu_info['threads'])
+
+    def get_disk_info(self):
+        for disk in psutil.disk_partitions():
+            # Exclude virtual, temp filesystems
+            if (
+                disk.device.startswith('/dev/loop') or
+                disk.device.startswith('/dev/sr') or  # CD-ROM
+                disk.fstype in ('tmpfs', 'squashfs', 'overlay', 'devtmpfs') or
+                'docker' in disk.mountpoint.lower() or
+                'snap' in disk.mountpoint.lower()
+            ):
+                continue
+            mem_total = psutil.disk_usage(disk.mountpoint).total
+            self.disk_info[f"{disk.device}"] = {
+                "mountpoint": disk.mountpoint,
+                "fstype": disk.fstype,
+                "mem total": humanize.naturalsize(mem_total),
+            }
+
+
+reporter = SystemReporter()
+reporter.get_disk_info()
+reporter.get_cpu_cores()
+reporter.print_cpu_info()
+reporter.print_disk_info()
