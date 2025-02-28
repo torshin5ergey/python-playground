@@ -30,17 +30,18 @@ class SystemReporter:
         self.meminfo_path = "/proc/meminfo"
         self.cpu_info = {}
         self.disk_info = {}
+        self.mem_info = {}
 
 
     def read_info(self, path: str):
         """"""
         try:
-            with open(self.cpuinfo_path, "r", encoding="utf-8") as f:
-                cpuinfo = f.read()
-            return cpuinfo
+            with open(path, "r", encoding="utf-8") as f:
+                data = f.read()
+            return data
         except FileNotFoundError:
-            log.error("cpuinfo file not found: %s", self.cpuinfo_path)
-            raise FileNotFoundError(f"cpuinfo file not found: {self.cpuinfo_path}")
+            log.error("System information file not found: %s", path)
+            raise FileNotFoundError(f"System information file not found: {path}")
 
 
     def report(self, param):
@@ -138,9 +139,16 @@ class SystemReporter:
             }
 
 
-    # def get_mem_info(self):
-    #     self.read_info(self.cpu_info)
+    def get_mem_info(self):
+        meminfo = self.read_info(self.meminfo_path)
 
+        total = re.search(r"MemTotal:\s+(\d+)", meminfo)
+        if not total:
+            log.error("Could not determine the total RAM")
+            raise ValueError("Total RAM information not found")
+
+        self.mem_info["total"] = humanize.naturalsize(int(total.group(1)) * 1024)
+        log.info("RAM total: %s", self.mem_info['total'])
 
 
 reporter = SystemReporter()
