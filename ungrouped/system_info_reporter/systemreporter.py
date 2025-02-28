@@ -27,14 +27,13 @@ class SystemReporter:
     """"""
     def __init__(self):
         self.cpuinfo_path = "/proc/cpuinfo"
+        self.meminfo_path = "/proc/meminfo"
         self.cpu_info = {}
         self.disk_info = {}
 
 
-    def read_cpuinfo(self, path=None):
+    def read_info(self, path: str):
         """"""
-        if path is None:
-            path = self.cpuinfo_path
         try:
             with open(self.cpuinfo_path, "r", encoding="utf-8") as f:
                 cpuinfo = f.read()
@@ -79,7 +78,7 @@ class SystemReporter:
 
     def get_cpu_model(self):
         """"""
-        cpuinfo = self.read_cpuinfo()
+        cpuinfo = self.read_info(self.cpu_info)
 
         cpu_model = re.search(r"model name\s+: (.+)", cpuinfo)
         if not cpu_model:
@@ -92,7 +91,7 @@ class SystemReporter:
 
     def get_cpu_cores(self):
         """"""
-        cpuinfo = self.read_cpuinfo()
+        cpuinfo = self.read_info(self.cpu_info)
 
         cpu_cores = len(re.findall(r"processor\s+: \d+", cpuinfo))
         if not cpu_cores:
@@ -105,7 +104,7 @@ class SystemReporter:
 
     def get_cpu_threads(self):
         """"""
-        cpuinfo = self.read_cpuinfo()
+        cpuinfo = self.read_info(self.cpu_info)
 
         cpu_threads = re.search(r"cpu cores\s+: (\d+)", cpuinfo)
         if not cpu_threads:
@@ -139,8 +138,11 @@ class SystemReporter:
             }
 
 
+    # def get_mem_info(self):
+    #     self.read_info(self.cpu_info)
+
+
+
 reporter = SystemReporter()
-reporter.get_disk_info()
-reporter.get_cpu_cores()
-reporter.print_cpu_info()
-reporter.print_disk_info()
+
+reporter.get_mem_info()

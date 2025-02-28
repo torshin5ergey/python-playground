@@ -20,13 +20,13 @@ class TestSystemReporter:
     @patch("builtins.open")
     def test_read_cpuinfo_positive(self, mock_file):
         reporter = SystemReporter()
-        reporter.read_cpuinfo()
+        reporter.read_info("/proc/cpuinfo")
 
     @patch("builtins.open", side_effect=FileNotFoundError)
     def test_read_cpuinfo_file_not_found(self, mock_file):
         reporter = SystemReporter()
         with pytest.raises(FileNotFoundError, match="cpuinfo file not found"):
-            reporter.read_cpuinfo("path/not/exists")
+            reporter.read_info("path/not/exists")
 
 
     # get_cpu_model
