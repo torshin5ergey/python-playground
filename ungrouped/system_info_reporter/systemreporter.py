@@ -29,11 +29,17 @@ class SystemReporter:
         self.disk_info = {}
 
 
-    def read_cpuinfo(self):
+    def read_cpuinfo(self, path=None):
         """"""
-        with open(self.cpuinfo_path, "r", encoding="utf-8") as f:
-            cpuinfo = f.read()
-        return cpuinfo
+        if path is None:
+            path = self.cpuinfo_path
+        try:
+            with open(self.cpuinfo_path, "r", encoding="utf-8") as f:
+                cpuinfo = f.read()
+            return cpuinfo
+        except FileNotFoundError:
+            log.error("cpuinfo file not found: %s", self.cpuinfo_path)
+            raise FileNotFoundError(f"cpuinfo file not found: {self.cpuinfo_path}")
 
 
     def report(self, param):
