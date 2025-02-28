@@ -55,6 +55,7 @@ class SystemReporter:
 
     def print_cpu_info(self):
         """"""
+        print() # empty line
         if not self.cpu_info:
             log.error("No CPU information available")
             return
@@ -65,12 +66,15 @@ class SystemReporter:
 
     def print_disk_info(self):
         """"""
+        print() # empty line
         if not self.disk_info:
             log.error("No disk information available")
             return
         print("Disk information:")
-        for key, value in self.disk_info.items():
-            print(f"{key}\t: {value}")
+        for disk in self.disk_info.keys():
+            print(disk)
+            for key, value in self.disk_info[disk].items():
+                print(f"{key}\t: {value}")
 
 
     def get_cpu_model(self):
@@ -123,11 +127,14 @@ class SystemReporter:
                 'snap' in disk.mountpoint.lower()
             ):
                 continue
+            device = disk.device
+            mountpoint = disk.mountpoint
+            fstype = disk.fstype
             mem_total = psutil.disk_usage(disk.mountpoint).total
-
-            self.disk_info[f"{disk.device}"] = {
-                "mountpoint": disk.mountpoint,
-                "fstype": disk.fstype,
+            log.info("Found disk %s: %s, %s, %s", device, mountpoint, fstype, mem_total)
+            self.disk_info[f"{device}"] = {
+                "mountpoint": mountpoint,
+                "filesystem type": fstype,
                 "mem total": humanize.naturalsize(mem_total),
             }
 
