@@ -16,6 +16,19 @@ CPUINFO_INVALID = read_test_data("cpuinfo_invalid")
 # Tests
 class TestSystemReporter:
 
+    # read_cpuinfo
+    @patch("builtins.open")
+    def test_read_cpuinfo_positive(self, mock_file):
+        reporter = SystemReporter()
+        reporter.read_cpuinfo()
+
+    @patch("builtins.open", side_effect=FileNotFoundError)
+    def test_read_cpuinfo_file_not_found(self, mock_file):
+        reporter = SystemReporter()
+        with pytest.raises(FileNotFoundError, match="cpuinfo file not found"):
+            reporter.read_cpuinfo("path/not/exists")
+
+
     # get_cpu_model
     @patch("builtins.open", new_callable=mock_open, read_data=CPUINFO_VALID)
     def test_get_cpu_model_positive(self, mock_file):
