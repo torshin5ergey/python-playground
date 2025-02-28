@@ -111,6 +111,7 @@ class SystemReporter:
         self.cpu_info["threads"] = int(cpu_threads.group(1))
         log.info("CPU threads: %s", self.cpu_info['threads'])
 
+
     def get_disk_info(self):
         for disk in psutil.disk_partitions():
             # Exclude virtual, temp filesystems
@@ -123,6 +124,7 @@ class SystemReporter:
             ):
                 continue
             mem_total = psutil.disk_usage(disk.mountpoint).total
+
             self.disk_info[f"{disk.device}"] = {
                 "mountpoint": disk.mountpoint,
                 "fstype": disk.fstype,
