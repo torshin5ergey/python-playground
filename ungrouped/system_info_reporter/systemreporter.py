@@ -46,9 +46,23 @@ class SystemReporter:
 
     def report(self, param):
         """"""
-        if param == "cpu":
+        if param == "all":
+            report = {
+                "cpu": self.cpu_info,
+                "mem": self.mem_info,
+                "disk": self.disk_info
+            }
+            log.info(json.dumps(report))
+            return json.dumps(report, indent=4)
+        elif param == "cpu":
             log.info(json.dumps(self.cpu_info))
             return json.dumps(self.cpu_info, indent=4)
+        elif param == "mem":
+            log.info(json.dumps(self.mem_info))
+            return json.dumps(self.mem_info, indent=4)
+        elif param == "disk":
+            log.info(json.dumps(self.disk_info))
+            return json.dumps(self.disk_info, indent=4)
         log.info("No data to report")
         return None
 
@@ -79,7 +93,7 @@ class SystemReporter:
 
     def get_cpu_model(self):
         """"""
-        cpuinfo = self.read_info(self.cpu_info)
+        cpuinfo = self.read_info(self.cpuinfo_path)
 
         cpu_model = re.search(r"model name\s+: (.+)", cpuinfo)
         if not cpu_model:
@@ -92,7 +106,7 @@ class SystemReporter:
 
     def get_cpu_cores(self):
         """"""
-        cpuinfo = self.read_info(self.cpu_info)
+        cpuinfo = self.read_info(self.cpuinfo_path)
 
         cpu_cores = len(re.findall(r"processor\s+: \d+", cpuinfo))
         if not cpu_cores:
@@ -105,7 +119,7 @@ class SystemReporter:
 
     def get_cpu_threads(self):
         """"""
-        cpuinfo = self.read_info(self.cpu_info)
+        cpuinfo = self.read_info(self.cpuinfo_path)
 
         cpu_threads = re.search(r"cpu cores\s+: (\d+)", cpuinfo)
         if not cpu_threads:
@@ -149,8 +163,3 @@ class SystemReporter:
 
         self.mem_info["total"] = humanize.naturalsize(int(total.group(1)) * 1024)
         log.info("RAM total: %s", self.mem_info['total'])
-
-
-reporter = SystemReporter()
-
-reporter.get_mem_info()
