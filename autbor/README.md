@@ -22,6 +22,7 @@ This directory contains a collection of Python projects created for practicing P
 from the command line or clipboard.
 - [multiclipboard_automatic_messages](./multiclipboard_automatic_messages): Multi-clipboard tool designed to store and retrieve commonly used phrases or texts.
 - [multiplication_quiz](./multiplication_quiz): Simple multiplication quiz game.
+- [opening_all_search_results](./opening_all_search_results/): Opens several search results for PyPi
 - [random_quiz_generator](./random_quiz_generator/): A multiple-choice quiz generator.
 - [regex_search](./regex_search/): User-supplied regex search in files.
 - [rename_dates](./rename_dates/): Renames filenames with American MM-DD-YYYY date format to
@@ -32,7 +33,7 @@ European DD-MM-YYYY.
 - [strong_password_validator](./strong_password_validator): Strong password validator using regular expressions.
 - [table_printer](./table_printer): Print data as a formatted table.
 - [tic_tac_toe](./tic_tac_toe): Classic Tic Tac Toe game.
-- [updatable_multiclipboard](./updatable_multiclipboard): Another implementation of [multi-clipboard tool](./multiclipboard_automatic_messages/). 
+- [updatable_multiclipboard](./updatable_multiclipboard): Another implementation of [multi-clipboard tool](./multiclipboard_automatic_messages/).
 - [zombie_dice_shell](./zombie_dice_shell): Simple CLI for configuring and running simulations of the Zombie Dice game.
 
 ## Author
