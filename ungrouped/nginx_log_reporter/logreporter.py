@@ -95,10 +95,10 @@ def parse_args():
 
 def main():
     args = parse_args()
-    
+
     report = parse_log(args.logfile)
     log.debug("Report\n%s", report)
-    
+
     if args.report_type == 'all':  # all
         fastest_ip, fastest_response = get_fastest(report)
         slowest_ip, slowest_response = get_slowest(report)
